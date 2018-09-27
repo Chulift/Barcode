@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<login>
+		<sql>
+			SELECT DISTINCT T1.Menu_Name as menuName FROM TBL_MS_MENU T1
+			INNER JOIN TBL_MS_ROLE_MENU T2 ON T1.Menu_ID = T2.Menu_ID AND T2.New_Flag = 1 AND T2.Delete_Flag = 0
+			INNER JOIN TBL_MS_ROLE_USER T3 ON T3.Role_ID = T2.Role_ID AND T3.New_Flag = 1 AND T3.Delete_Flag = 0
+			INNER JOIN TBL_MS_USER T4 ON T4.USER_ID = T3.User_ID AND T4.New_Flag = 1 AND T4.Delete_Flag = 0
+			WHERE T1.New_Flag = 1 AND T1.Delete_Flag = 0
+		</sql>
+		<result>
+			<column>menuName</column>
+		</result>
+		<item>
+			<field>USER_ID</field>
+			<table>T4</table>
+			<key>userId</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>PASSWORD</field>
+			<table>T4</table>
+			<key>password</key>
+			<endFlag>0</endFlag>
+		</item>
+	</login>
+	<picking>
+		<result>
+			<column>location</column>
+			<column>candidate</column>
+			<column>quota</column>
+		</result>
+	</picking>
+</config>

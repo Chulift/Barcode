@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_MS_USER</table>
+		</insert>
+		<item>
+			<field>User_ID</field>
+			<table>TBL_MS_USER</table>
+			<key>userId</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>User_Name</field>
+			<table>TBL_MS_USER</table>
+			<key>userName</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.User_ID as UserId,
+				   T1.User_Name as UserName 
+			FROM TBL_MS_USER T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>UserId</column>
+			<column>UserName</column>
+		</result>
+		<item>
+			<field>User_ID</field>
+			<table>T1</table>
+			<key>userId</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

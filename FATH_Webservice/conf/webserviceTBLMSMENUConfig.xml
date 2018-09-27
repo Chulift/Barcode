@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_MS_MENU</table>
+		</insert>
+		<item>
+			<field>Menu_ID</field>
+			<table>TBL_MS_MENU</table>
+			<key>menuId</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Menu_Name</field>
+			<table>TBL_MS_MENU</table>
+			<key>menuName</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.Menu_ID as MenuId,
+				   T1.Menu_Name as MenuName 
+			FROM TBL_MS_MENU T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>MenuId</column>
+			<column>MenuName</column>
+			<endFlag>0</endFlag>
+		</result>
+		<item>
+			<field>Menu_ID</field>
+			<table>T1</table>
+			<key>menuId</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

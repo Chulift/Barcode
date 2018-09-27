@@ -1,0 +1,247 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FATHBarcode</RootNamespace>
+    <AssemblyName>FATHBarcode</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.00</OSVersion>
+    <DeployDirSuffix>FATHBarcode</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <StartupObject>FATHBarcode.Program</StartupObject>
+    <ApplicationIcon>Container-Wood_35526.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="btLibDefNet, Version=1.5.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\lib\btLibDefNet.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="btScanLibNet, Version=1.5.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\lib\btScanLibNet.dll</HintPath>
+    </Reference>
+    <Reference Include="btSysLibNet, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\lib\btSysLibNet.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonLibrary, Version=1.0.6757.27286, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CommonLibrary\CommonLibrary\bin\Debug\CommonLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windowsce.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\lib\Newtonsoft.Json.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\IView.cs" />
+    <Compile Include="Base\GenericObject.cs" />
+    <Compile Include="Base\Presenter.cs" />
+    <Compile Include="Config\DBConnect.cs" />
+    <Compile Include="Config\Settings.cs" />
+    <Compile Include="Model\IFGPickingRepository.cs" />
+    <Compile Include="Model\ILoginRepository.cs" />
+    <Compile Include="Model\IMenuRepository.cs" />
+    <Compile Include="Model\IScanDeliveryOrderTagRepository.cs" />
+    <Compile Include="Model\IShippingRepository.cs" />
+    <Compile Include="Model\Object\Login\AuthenticationResponse.cs" />
+    <Compile Include="Model\Object\FGPicking\FGPicking.cs" />
+    <Compile Include="Model\Object\FGPicking\FGPickingRepository.cs" />
+    <Compile Include="Model\Object\GenericCode.cs" />
+    <Compile Include="Model\Object\Login\LoginAuthentication.cs" />
+    <Compile Include="Model\Object\MenuRepository.cs" />
+    <Compile Include="Model\Object\Picking.cs" />
+    <Compile Include="Model\Object\ScanDeliveryOrderTagRepository.cs" />
+    <Compile Include="Model\Object\Shipping\ShippingRepository.cs" />
+    <Compile Include="Model\Object\Shipping\Shipping.cs" />
+    <Compile Include="Model\Object\Shipping\ShippingTransaction.cs" />
+    <Compile Include="MsgWindow.cs" />
+    <Compile Include="OperationLog.cs" />
+    <Compile Include="Presenter\FGPickingDetailPresenter.cs" />
+    <Compile Include="Presenter\FGPickingPresenter.cs" />
+    <Compile Include="Presenter\LoginPresenter.cs" />
+    <Compile Include="Presenter\MenuPresenter.cs" />
+    <Compile Include="Presenter\ScanDeliveryOrderTagPresenter.cs" />
+    <Compile Include="Presenter\ShippingPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Object\FGPickingDetail.resx">
+      <DependentUpon>FGPickingDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Object\FGPickingForm.resx">
+      <DependentUpon>FGPickingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Object\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Object\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Object\ScanDeliveryOrderTagForm.resx">
+      <DependentUpon>ScanDeliveryOrderTagForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Object\ShippingForm.resx">
+      <DependentUpon>ShippingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="View\IFGPickingDetailView.cs" />
+    <Compile Include="View\IFGPickingView.cs" />
+    <Compile Include="View\ILoginView.cs" />
+    <Compile Include="View\IMenuView.cs" />
+    <Compile Include="View\IScanDeliveryOrderTagView.cs" />
+    <Compile Include="View\IShippingView.cs" />
+    <Compile Include="View\Object\FGPickingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Object\FGPickingDetail.Designer.cs">
+      <DependentUpon>FGPickingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Object\FGPickingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Object\FGPickingForm.Designer.cs">
+      <DependentUpon>FGPickingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Object\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Object\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Object\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Object\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Object\ScanDeliveryOrderTagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Object\ScanDeliveryOrderTagForm.Designer.cs">
+      <DependentUpon>ScanDeliveryOrderTagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Object\ShippingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Object\ShippingForm.Designer.cs">
+      <DependentUpon>ShippingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\JavaWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppDatabase.sdf">
+    </Content>
+    <Content Include="Container-Wood_35526.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.100.144:8090/tag_webservice/services/ServicesBLPort%3fwsdl">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\JavaWebService\</RelPath>
+      <UpdateFromURL>http://192.168.100.144:8090/tag_webservice/services/ServicesBLPort%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\JavaWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\JavaWebService\ServicesBLPort.xsd" />
+    <None Include="Web References\JavaWebService\ServicesBLService.wsdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

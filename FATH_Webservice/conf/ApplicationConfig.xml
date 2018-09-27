@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <config>
+	<language>
+		<!--  Application Locale --> 
+ 	 	<locale-value>en</locale-value> 
+ 	 </language>
+ 	<date>
+		<!--  Date format --> 
+  		<format>dd/MM/yyyy</format> 
+  	</date>
+  	
+	<database>
+		<!-- @Development Database URL -->
+		<!-- <url>jdbc:mysql://192.168.100.211:3306/johoku_uat_161118</url> -->
+		<url>jdbc:sqlserver://localhost:1433;DatabaseName=tag_ws_db</url>
+		<!-- @Username for DB -->
+		<username>imart</username>
+		<password>imart</password>
+		<!-- JDBC Driver Name -->
+	<driver-name>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-name>
+  	</database>
+  	
+	<searching>
+  		<maxrecord>500</maxrecord> 
+  	</searching>
+  	<Server>
+  		<Path>\\192.168.1.100</Path>
+  		<!-- <Path>\\192.168.101.136\Share\IF_TEST</Path>  -->
+ 	</Server>
+</config>

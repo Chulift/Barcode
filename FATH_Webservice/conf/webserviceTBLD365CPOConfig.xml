@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_D365_CPO</table>
+		</insert>
+		<item>
+			<field>CPO_No</field>
+			<table>TBL_D365_CPO</table>
+			<key>cpoNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Customer_No</field>
+			<table>TBL_D365_CPO</table>
+			<key>customerNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Part_No</field>
+			<table>TBL_D365_CPO</table>
+			<key>partNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Qty</field>
+			<table>TBL_D365_CPO</table>
+			<key>qty</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.CPO_No as cpoNo,
+				   T1.Customer_No as customerNo,
+				   T1.Part_No as partNo,
+				   T1.Qty as qty 
+			FROM TBL_D365_CPO T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>cpoNo</column>
+			<column>customerNo</column>
+			<column>partNo</column>
+			<column>qty</column>
+		</result>
+		<item>
+			<field>CPO_No</field>
+			<table>T1</table>
+			<key>cpoNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Part_No</field>
+			<table>T1</table>
+			<key>partNo</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://logic.model.services.nssol.co.th/" targetNamespace="http://logic.model.services.nssol.co.th/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getConnectAX" type="tns:getConnectAX" />
+  <xs:element name="getConnectAXResponse" type="tns:getConnectAXResponse" />
+  <xs:element name="getConnectD365" type="tns:getConnectD365" />
+  <xs:element name="getConnectD365Response" type="tns:getConnectD365Response" />
+  <xs:element name="getLogin" type="tns:getLogin" />
+  <xs:element name="getLoginResponse" type="tns:getLoginResponse" />
+  <xs:element name="getMasterData" type="tns:getMasterData" />
+  <xs:element name="getMasterDataResponse" type="tns:getMasterDataResponse" />
+  <xs:element name="getPickingDetail" type="tns:getPickingDetail" />
+  <xs:element name="getPickingDetailResponse" type="tns:getPickingDetailResponse" />
+  <xs:element name="getShippingDetail" type="tns:getShippingDetail" />
+  <xs:element name="getShippingDetailResponse" type="tns:getShippingDetailResponse" />
+  <xs:element name="insertMasterData" type="tns:insertMasterData" />
+  <xs:element name="insertMasterDataResponse" type="tns:insertMasterDataResponse" />
+  <xs:element name="insertPickingDetail" type="tns:insertPickingDetail" />
+  <xs:element name="insertPickingDetailResponse" type="tns:insertPickingDetailResponse" />
+  <xs:element name="insertShippingDetail" type="tns:insertShippingDetail" />
+  <xs:element name="insertShippingDetailResponse" type="tns:insertShippingDetailResponse" />
+  <xs:complexType name="getLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="object" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLoginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertShippingDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="object" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertShippingDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getShippingDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="object" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getShippingDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getConnectAX">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getConnectAXResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMasterData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="function" type="xs:string" />
+      <xs:element minOccurs="0" name="object" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMasterDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getConnectD365">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getConnectD365Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertPickingDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="object" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertPickingDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMasterData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="function" type="xs:string" />
+      <xs:element minOccurs="0" name="object" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertMasterDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPickingDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="object" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPickingDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

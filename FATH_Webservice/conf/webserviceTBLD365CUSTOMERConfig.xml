@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_D365_CUSTOMER</table>
+		</insert>
+		<item>
+			<field>Customer_No</field>
+			<table>TBL_D365_CUSTOMER</table>
+			<key>customerNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Santen_Flag</field>
+			<table>TBL_D365_CUSTOMER</table>
+			<key>santenFlag</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.Customer_No as customerNo,
+				   T1.Santen_Flag as santenFlag
+			FROM TBL_D365_CUSTOMER T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>customerNo</column>
+			<column>santenFlag</column>
+		</result>
+		<item>
+			<field>Customer_No</field>
+			<table>T1</table>
+			<key>customerNo</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

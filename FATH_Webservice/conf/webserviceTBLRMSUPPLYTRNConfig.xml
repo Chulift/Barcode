@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_RM_SUPPLY_TRN</table>
+		</insert>
+		<item>
+			<field>PDO_No</field>
+			<table>TBL_RM_SUPPLY_TRN</table>
+			<key>pdoNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Location</field>
+			<table>TBL_RM_SUPPLY_TRN</table>
+			<key>location</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Item_No</field>
+			<table>TBL_RM_SUPPLY_TRN</table>
+			<key>itemNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Issue_Qty</field>
+			<table>TBL_RM_SUPPLY_TRN</table>
+			<key>issueQty</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Trans_Type</field>
+			<table>TBL_RM_SUPPLY_TRN</table>
+			<key>transType</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.PDO_No as pdoNo,
+				   T1.Location as location,
+				   T1.Item_No as itemNo,
+				   T1.Issue_Qty as issueQty,
+				   T1.Trans_Type as transType 
+			FROM TBL_RM_PUR_RCV_TRN T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>pdoNo</column>
+			<column>location</column>
+			<column>itemNo</column>
+			<column>issueQty</column>
+			<column>transType</column>
+		</result>
+		<item>
+			<field>PDO_No</field>
+			<table>T1</table>
+			<key>pdoNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Location</field>
+			<table>T1</table>
+			<key>location</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Item_No</field>
+			<table>T1</table>
+			<key>itemNo</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

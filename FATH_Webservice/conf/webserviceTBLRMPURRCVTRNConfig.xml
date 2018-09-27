@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_RM_PUR_RCV_TRN</table>
+		</insert>
+		<item>
+			<field>PO_No</field>
+			<table>TBL_RM_PUR_RCV_TRN</table>
+			<key>poNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Item_No</field>
+			<table>TBL_RM_PUR_RCV_TRN</table>
+			<key>itemNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Receive_Qty</field>
+			<table>TBL_RM_PUR_RCV_TRN</table>
+			<key>receiveQty</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.PO_No as poNo,
+				   T1.Item_No as itemNo,
+				   T1.Receive_Qty as receiveQty 
+			FROM TBL_RM_PUR_RCV_TRN T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>poNo</column>
+			<column>itemNo</column>
+			<column>receiveQty</column>
+		</result>
+		<item>
+			<field>PO_No</field>
+			<table>T1</table>
+			<key>poNo</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

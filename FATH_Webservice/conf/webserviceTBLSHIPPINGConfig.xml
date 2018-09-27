@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_TRN_FG_PICK_SHIP</table>
+		</insert>
+		<item>
+			<field>Sales_Order_No</field>
+			<table>TBL_TRN_FG_PICK_SHIP</table>
+			<key>referenceNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Tag_No</field>
+			<table>TBL_TRN_FG_PICK_SHIP</table>
+			<key>tagNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Part_No</field>
+			<table>TBL_TRN_FG_PICK_SHIP</table>
+			<key>partNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Scan_Datetime</field>
+			<table>TBL_TRN_FG_PICK_SHIP</table>
+			<key>scanDateTime</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Result_Mode</field>
+			<table>TBL_TRN_FG_PICK_SHIP</table>
+			<key>resultMode</key>
+			<endFlag>0</endFlag>
+		</item>
+		
+	</webservice_insert>
+</config>

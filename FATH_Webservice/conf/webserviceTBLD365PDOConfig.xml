@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_D365_PDO</table>
+		</insert>
+		<item>
+			<field>PDO_No</field>
+			<table>TBL_D365_PDO</table>
+			<key>pdoNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Item_No</field>
+			<table>TBL_D365_PDO</table>
+			<key>itemNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>PDO_Qty</field>
+			<table>TBL_D365_PDO</table>
+			<key>pdoQty</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.PDO_No as pdoNo,
+				   T1.Item_No as itemNo,
+				   T1.PDO_Qty as pdoQty 
+			FROM TBL_D365_PDO T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>pdoNo</column>
+			<column>itemNo</column>
+			<column>pdoQty</column>
+		</result>
+		<item>
+			<field>PDO_No</field>
+			<table>T1</table>
+			<key>pdoNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Item_No</field>
+			<table>T1</table>
+			<key>itemNo</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

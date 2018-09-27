@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_INF_LOG</table>
+		</insert>
+		<item>
+			<field>User_ID</field>
+			<table>TBL_INF_LOG</table>
+			<key>userId</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Operation_Datetime</field>
+			<table>TBL_INF_LOG</table>
+			<key>operationDatetime</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>WS_Name</field>
+			<table>TBL_INF_LOG</table>
+			<key>wsName</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>WS_Function</field>
+			<table>TBL_INF_LOG</table>
+			<key>wsFunction</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Log_Type</field>
+			<table>TBL_INF_LOG</table>
+			<key>logType</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Log_Description</field>
+			<table>TBL_INF_LOG</table>
+			<key>logDescription</key>
+			<endFlag>1</endFlag>
+		</item>
+	</webservice_insert>
+</config>

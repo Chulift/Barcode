@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_LOGIN_LOG</table>
+		</insert>
+		<item>
+			<field>User_ID</field>
+			<table>TBL_LOGIN_LOG</table>
+			<key>userId</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Operation_Datetime</field>
+			<table>TBL_LOGIN_LOG</table>
+			<key>operationDatetime</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Result</field>
+			<table>TBL_LOGIN_LOG</table>
+			<key>result</key>
+			<endFlag>1</endFlag>
+		</item>
+	</webservice_insert>
+</config>

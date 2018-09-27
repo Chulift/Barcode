@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ServicesBLService" targetNamespace="http://logic.model.services.nssol.co.th/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://logic.model.services.nssol.co.th/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://logic.model.services.nssol.co.th/" schemaLocation="servicesbl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getPickingDetailResponse">
+    <wsdl:part name="parameters" element="tns:getPickingDetailResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getConnectAXResponse">
+    <wsdl:part name="parameters" element="tns:getConnectAXResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogin">
+    <wsdl:part name="parameters" element="tns:getLogin">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getShippingDetail">
+    <wsdl:part name="parameters" element="tns:getShippingDetail">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLoginResponse">
+    <wsdl:part name="parameters" element="tns:getLoginResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPickingDetailResponse">
+    <wsdl:part name="parameters" element="tns:insertPickingDetailResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertShippingDetail">
+    <wsdl:part name="parameters" element="tns:insertShippingDetail">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getShippingDetailResponse">
+    <wsdl:part name="parameters" element="tns:getShippingDetailResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertShippingDetailResponse">
+    <wsdl:part name="parameters" element="tns:insertShippingDetailResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMasterDataResponse">
+    <wsdl:part name="parameters" element="tns:getMasterDataResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getConnectAX">
+    <wsdl:part name="parameters" element="tns:getConnectAX">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMasterData">
+    <wsdl:part name="parameters" element="tns:getMasterData">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getConnectD365">
+    <wsdl:part name="parameters" element="tns:getConnectD365">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getConnectD365Response">
+    <wsdl:part name="parameters" element="tns:getConnectD365Response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPickingDetail">
+    <wsdl:part name="parameters" element="tns:insertPickingDetail">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertMasterData">
+    <wsdl:part name="parameters" element="tns:insertMasterData">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPickingDetail">
+    <wsdl:part name="parameters" element="tns:getPickingDetail">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertMasterDataResponse">
+    <wsdl:part name="parameters" element="tns:insertMasterDataResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicesBL">
+    <wsdl:operation name="getLogin">
+      <wsdl:input name="getLogin" message="tns:getLogin">
+    </wsdl:input>
+      <wsdl:output name="getLoginResponse" message="tns:getLoginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertShippingDetail">
+      <wsdl:input name="insertShippingDetail" message="tns:insertShippingDetail">
+    </wsdl:input>
+      <wsdl:output name="insertShippingDetailResponse" message="tns:insertShippingDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getShippingDetail">
+      <wsdl:input name="getShippingDetail" message="tns:getShippingDetail">
+    </wsdl:input>
+      <wsdl:output name="getShippingDetailResponse" message="tns:getShippingDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConnectAX">
+      <wsdl:input name="getConnectAX" message="tns:getConnectAX">
+    </wsdl:input>
+      <wsdl:output name="getConnectAXResponse" message="tns:getConnectAXResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMasterData">
+      <wsdl:input name="getMasterData" message="tns:getMasterData">
+    </wsdl:input>
+      <wsdl:output name="getMasterDataResponse" message="tns:getMasterDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConnectD365">
+      <wsdl:input name="getConnectD365" message="tns:getConnectD365">
+    </wsdl:input>
+      <wsdl:output name="getConnectD365Response" message="tns:getConnectD365Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPickingDetail">
+      <wsdl:input name="insertPickingDetail" message="tns:insertPickingDetail">
+    </wsdl:input>
+      <wsdl:output name="insertPickingDetailResponse" message="tns:insertPickingDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterData">
+      <wsdl:input name="insertMasterData" message="tns:insertMasterData">
+    </wsdl:input>
+      <wsdl:output name="insertMasterDataResponse" message="tns:insertMasterDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPickingDetail">
+      <wsdl:input name="getPickingDetail" message="tns:getPickingDetail">
+    </wsdl:input>
+      <wsdl:output name="getPickingDetailResponse" message="tns:getPickingDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesBLServiceSoapBinding" type="tns:ServicesBL">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getLogin">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogin">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLoginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertShippingDetail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="insertShippingDetail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="insertShippingDetailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getShippingDetail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getShippingDetail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getShippingDetailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConnectAX">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getConnectAX">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getConnectAXResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMasterData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMasterData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMasterDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConnectD365">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getConnectD365">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getConnectD365Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPickingDetail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="insertPickingDetail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="insertPickingDetailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMasterData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="insertMasterData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="insertMasterDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPickingDetail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPickingDetail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPickingDetailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicesBLService">
+    <wsdl:port name="ServicesBLPort" binding="tns:ServicesBLServiceSoapBinding">
+      <soap:address location="http://localhost:13369/tag_webservice/services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

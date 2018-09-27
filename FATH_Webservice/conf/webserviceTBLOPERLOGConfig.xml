@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_OPER_LOG</table>
+		</insert>
+		<item>
+			<field>Menu_ID</field>
+			<table>TBL_OPER_LOG</table>
+			<key>menuID</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Operation_Datetime</field>
+			<table>TBL_OPER_LOG</table>
+			<key>operationDateTime</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>User_ID</field>
+			<table>TBL_OPER_LOG</table>
+			<key>userID</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Event</field>
+			<table>TBL_OPER_LOG</table>
+			<key>event</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Field_Name</field>
+			<table>TBL_OPER_LOG</table>
+			<key>fieldName</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Field_Value</field>
+			<table>TBL_OPER_LOG</table>
+			<key>fieldValue</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Error_flag </field>
+			<table>TBL_OPER_LOG</table>
+			<key>errorFlag</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Error_MSG_ID</field>
+			<table>TBL_OPER_LOG</table>
+			<key>errorMessageID</key>
+			<endFlag>1</endFlag>
+		</item>
+	</webservice_insert>
+</config>

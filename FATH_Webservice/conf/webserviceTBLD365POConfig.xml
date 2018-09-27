@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_D365_PO</table>
+		</insert>
+		<item>
+			<field>PO_No</field>
+			<table>TBL_D365_PO</table>
+			<key>poNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Item_No</field>
+			<table>TBL_D365_PO</table>
+			<key>itemNo</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>PO_Qty</field>
+			<table>TBL_D365_PO</table>
+			<key>poQty</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.PO_No as poNo,
+				   T1.Item_No as itemNo,
+				   T1.PO_Qty as poQty 
+			FROM TBL_D365_PO T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>poNo</column>
+			<column>itemNo</column>
+			<column>poQty</column>
+		</result>
+		<item>
+			<field>PO_No</field>
+			<table>T1</table>
+			<key>poNo</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>

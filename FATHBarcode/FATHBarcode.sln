@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FATHBarcode", "FATHBarcode.csproj", "{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "FATHCAB", "..\FATHCAB\FATHCAB.vddproj", "{F3DAF534-828B-4FA5-8F11-EB36A7E29748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTHelper", "..\HTHelper\HTHelper.csproj", "{B8111B48-86B5-40CA-9EBA-8C2584DE61E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0AEDA7-3644-4AD3-BB8D-D29757B9EABF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F3DAF534-828B-4FA5-8F11-EB36A7E29748}.Debug|Any CPU.ActiveCfg = Debug
+		{F3DAF534-828B-4FA5-8F11-EB36A7E29748}.Release|Any CPU.ActiveCfg = Release
+		{B8111B48-86B5-40CA-9EBA-8C2584DE61E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8111B48-86B5-40CA-9EBA-8C2584DE61E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8111B48-86B5-40CA-9EBA-8C2584DE61E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8111B48-86B5-40CA-9EBA-8C2584DE61E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

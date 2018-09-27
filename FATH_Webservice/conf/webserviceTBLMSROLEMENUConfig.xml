@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<webservice_insert>
+		<insert>
+			<table>TBL_MS_ROLE_MENU</table>
+		</insert>
+		<item>
+			<field>Role_ID</field>
+			<table>TBL_MS_ROLE_MENU</table>
+			<key>roleId</key>
+			<endFlag>0</endFlag>
+		</item>
+		<item>
+			<field>Menu_ID</field>
+			<table>TBL_MS_ROLE_MENU</table>
+			<key>menuId</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_insert>
+	<webservice_get>
+		<sql>
+			SELECT T1.Role_ID as RoleId,
+				   T1.Menu_ID as MenuId 
+			FROM TBL_MS_ROLE_MENU T1
+			WHERE T1.Delete_Flag = 0 AND T1.New_Flag = 1 
+		</sql>
+		<result>
+			<column>RoleId</column>
+			<column>MenuId</column>
+			<endFlag>0</endFlag>
+		</result>
+		<item>
+			<field>Role_ID</field>
+			<table>T1</table>
+			<key>roleId</key>
+			<endFlag>0</endFlag>
+		</item>
+	</webservice_get>
+</config>
